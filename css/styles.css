@@ -1,0 +1,710 @@
+/* ============================================================
+   SISTEMA DE DISEÑO - PORTAFOLIO PERSONAL
+   Tema oscuro con acentos azul-violeta y glassmorphism
+   ============================================================ */
+
+/* ---- 2.1 Variables CSS (Design Tokens) ---- */
+
+:root {
+  /* Colores principales - Tema oscuro */
+  --color-bg-primary: #0f0f1a;
+  --color-bg-secondary: #1a1a2e;
+  --color-bg-card: rgba(255, 255, 255, 0.05);
+  --color-bg-card-hover: rgba(255, 255, 255, 0.1);
+
+  /* Gradiente de acento azul-violeta */
+  --color-accent-start: #667eea;
+  --color-accent-end: #764ba2;
+  --gradient-accent: linear-gradient(135deg, var(--color-accent-start), var(--color-accent-end));
+
+  /* Texto */
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #a0a0b0;
+  --color-text-heading: #ffffff;
+  --color-text-accent: #667eea;
+
+  /* Bordes y sombras */
+  --color-border: rgba(255, 255, 255, 0.1);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 12px 40px rgba(102, 126, 234, 0.2);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(10px);
+
+  /* Tipografía */
+  --font-family-heading: 'Inter', sans-serif;
+  --font-family-body: 'Inter', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+
+  /* Espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Bordes */
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 1.5rem;
+  --border-radius-full: 50%;
+
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+
+/* ---- 2.2 Estilos Base / Reset ---- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-text-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-end);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  color: var(--color-text-heading);
+  line-height: 1.2;
+}
+
+/* ---- 2.3 Tarjeta con Glassmorphism ---- */
+
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-normal),
+              box-shadow var(--transition-normal),
+              background var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  background: var(--color-bg-card-hover);
+}
+
+/* ---- 2.4 Estilos de Secciones ---- */
+
+.section {
+  padding: var(--spacing-3xl) 0;
+}
+
+.section__container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+}
+
+.section__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 3px solid transparent;
+  border-image: var(--gradient-accent) 1;
+  display: inline-block;
+}
+
+
+/* ============================================================
+   TAREA 3: ESTILOS DE COMPONENTES ESPECÍFICOS
+   ============================================================ */
+
+/* ---- 3.1 Hero / Header ---- */
+
+.hero {
+  padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+  background-color: var(--color-bg-secondary);
+}
+
+.hero__container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2xl);
+}
+
+.hero__photo-wrapper {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: var(--border-radius-full);
+  padding: 4px;
+  background: var(--gradient-accent);
+}
+
+.hero__photo {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-full);
+  object-fit: cover;
+  border: 3px solid var(--color-bg-secondary);
+}
+
+.hero__info {
+  flex: 1;
+}
+
+.hero__name {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  white-space: nowrap;
+}
+
+.hero__title {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: color var(--transition-fast),
+              background var(--transition-fast);
+}
+
+.hero__link:hover {
+  color: var(--color-text-accent);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.hero__icon {
+  font-size: var(--font-size-base);
+}
+
+/* Navegación del Hero */
+
+.hero__nav {
+  max-width: 900px;
+  margin: var(--spacing-xl) auto 0;
+  padding: 0 var(--spacing-xl);
+}
+
+.hero__nav-list {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.hero__nav-link {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition-fast),
+              border-color var(--transition-fast);
+}
+
+.hero__nav-link:hover {
+  color: var(--color-text-heading);
+  border-bottom-color: var(--color-accent-start);
+}
+
+
+/* ---- 3.2 Línea de Tiempo de Experiencia ---- */
+
+.timeline {
+  position: relative;
+  padding-left: var(--spacing-2xl);
+}
+
+/* Línea vertical */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gradient-accent);
+  border-radius: 1px;
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+/* Marcador circular */
+.timeline__marker {
+  position: absolute;
+  left: calc(-1 * var(--spacing-2xl) + 2px);
+  top: var(--spacing-xl);
+  width: 14px;
+  height: 14px;
+  border-radius: var(--border-radius-full);
+  background: var(--gradient-accent);
+  border: 2px solid var(--color-bg-primary);
+  z-index: 1;
+}
+
+.timeline__role {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline__company {
+  color: var(--color-text-accent);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline__period {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline__description {
+  color: var(--color-text-primary);
+  line-height: 1.7;
+}
+
+/* Animación escalonada para items del timeline */
+.timeline__item:nth-child(1) { transition-delay: 0s; }
+.timeline__item:nth-child(2) { transition-delay: 0.15s; }
+.timeline__item:nth-child(3) { transition-delay: 0.3s; }
+.timeline__item:nth-child(4) { transition-delay: 0.45s; }
+.timeline__item:nth-child(5) { transition-delay: 0.6s; }
+
+
+/* ---- 3.3 Chips de Habilidades ---- */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 1px solid var(--glass-border);
+  cursor: default;
+  transition: transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.skill-chip:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-chip[data-category="cloud"] {
+  background: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+}
+
+.skill-chip[data-category="lenguajes"] {
+  background: rgba(118, 75, 162, 0.2);
+  color: #a78bfa;
+}
+
+.skill-chip[data-category="herramientas"] {
+  background: rgba(52, 211, 153, 0.2);
+  color: #34d399;
+}
+
+.skill-chip[data-category="conceptos"] {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+}
+
+
+/* ---- 3.4 Tarjetas de Educación ---- */
+
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.education-item__degree {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-item__institution {
+  color: var(--color-text-accent);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-item__year {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+
+/* ---- 3.5 Footer ---- */
+
+.footer {
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.footer__container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+}
+
+.footer__download-btn {
+  display: inline-block;
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  background: var(--gradient-accent);
+  color: var(--color-text-heading);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  border-radius: var(--border-radius-lg);
+  text-decoration: none;
+  transition: filter var(--transition-fast),
+              transform var(--transition-fast);
+}
+
+.footer__download-btn:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  color: var(--color-text-heading);
+}
+
+.footer__updated {
+  margin-top: var(--spacing-xl);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+
+/* ============================================================
+   TAREA 4: DISEÑO RESPONSIVO
+   ============================================================ */
+
+/* ---- 4.3 Prevenir scroll horizontal en todos los viewports ---- */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ---- 4.1 Media Queries - Móvil (max-width: 767px) ---- */
+
+@media (max-width: 767px) {
+
+  /* Hero: layout vertical */
+  .hero {
+    padding: var(--spacing-2xl) 0 var(--spacing-xl);
+  }
+
+  .hero__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-lg);
+    padding: 0 var(--spacing-md);
+  }
+
+  .hero__photo-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero__info-header {
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  .hero__name {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-base);
+  }
+
+  .hero__contact {
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  .hero__link {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Navegación: columna centrada */
+  .hero__nav {
+    padding: 0 var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+
+  .hero__nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .hero__nav-link {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Secciones: reducir padding */
+  .section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .section__container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .section__title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  /* Timeline: sin línea lateral, tarjetas apiladas */
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline__marker {
+    display: none;
+  }
+
+  .timeline__item {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .timeline__role {
+    font-size: var(--font-size-base);
+  }
+
+  /* Habilidades: grid de 2 columnas */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .skill-chip {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  /* Educación: una columna */
+  .education-list {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  /* Tarjetas: reducir padding */
+  .card {
+    padding: var(--spacing-lg);
+  }
+
+  /* Footer: ajustes */
+  .footer {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .footer__download-btn {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-base);
+  }
+}
+
+
+/* ---- 4.2 Media Queries - Tablet (768px - 1023px) ---- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* Hero: horizontal pero con spacing ajustado */
+  .hero__container {
+    gap: var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
+  }
+
+  .hero__photo-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero__name {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero__nav {
+    padding: 0 var(--spacing-lg);
+  }
+
+  /* Secciones: ajustar padding */
+  .section__container {
+    padding: 0 var(--spacing-lg);
+  }
+
+  /* Educación: grid de 2 columnas */
+  .education-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Skills: mantener grid adaptable */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  /* Tarjetas: ajustar padding */
+  .card {
+    padding: var(--spacing-lg);
+  }
+
+  /* Footer */
+  .footer__download-btn {
+    font-size: var(--font-size-base);
+  }
+}
+
+
+/* ============================================================
+   TAREA 5: ANIMACIONES DE SCROLL
+   ============================================================ */
+
+/* ---- 5.4 Animaciones de Scroll ---- */
+
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ---- Language Switcher ---- */
+
+.hero__info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.lang-switcher {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  color: var(--color-text-heading);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast),
+              transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.lang-switcher:hover {
+  background: var(--color-bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.lang-switcher:focus-visible {
+  outline: 2px solid var(--color-accent-start);
+  outline-offset: 2px;
+}

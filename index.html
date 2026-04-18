@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio - Valentina Montaño</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ========== HERO / HEADER ========== -->
+  <header class="hero" id="inicio">
+    <div class="hero__container">
+      <div class="hero__photo-wrapper">
+        <img
+          src="assets/img/face.png"
+          alt="Foto de perfil de Nombre del Usuario"
+          class="hero__photo"
+        />
+      </div>
+      <div class="hero__info">
+        <div class="hero__info-header">
+          <h1 class="hero__name" data-i18n="hero.name">Valentina Montaño</h1>
+          <button class="lang-switcher" id="lang-switcher" type="button" aria-label="Cambiar idioma a inglés" title="Switch to English">EN</button>
+        </div>
+        <p class="hero__title" data-i18n="hero.title">Ing. Sistemas Computacionales</p>
+        <div class="hero__contact">
+          <a href="mailto:valentinamontanosa@gmail.com" class="hero__link">
+            <span class="hero__icon" aria-hidden="true"></span> <span data-i18n="hero.email">email: valentinamontanosa@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/valentina-montaño1610" class="hero__link" target="_blank" rel="noopener noreferrer">
+            <span class="hero__icon" aria-hidden="true"></span> <span data-i18n="hero.linkedin">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="hero__nav" aria-label="Navegación principal">
+      <ul class="hero__nav-list">
+        <li><a href="#perfil" class="hero__nav-link" data-i18n="nav.perfil">Perfil</a></li>
+        <li><a href="#experiencia" class="hero__nav-link" data-i18n="nav.experiencia">Experiencia</a></li>
+        <li><a href="#habilidades" class="hero__nav-link" data-i18n="nav.habilidades">Habilidades</a></li>
+        <li><a href="#educacion" class="hero__nav-link" data-i18n="nav.educacion">Educación</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== PERFIL PERSONAL ========== -->
+    <section class="section section--perfil" id="perfil">
+      <div class="section__container">
+        <h2 class="section__title" data-i18n="section.perfil">Perfil Personal</h2>
+        <div class="card card--perfil">
+          <p class="card__text" data-i18n="perfil.texto">Profesional con amplia experiencia en el sector tecnológico, apasionado por la innovación y el desarrollo de soluciones eficientes. Con sólidos conocimientos en arquitectura de software, metodologías ágiles y liderazgo de equipos multidisciplinarios. Comprometido con el aprendizaje continuo y la mejora constante de procesos y productos digitales.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCIA LABORAL ========== -->
+    <section class="section section--experiencia" id="experiencia">
+      <div class="section__container">
+        <h2 class="section__title" data-i18n="section.experiencia">Experiencia Laboral</h2>
+        <div class="timeline">
+
+          <div class="timeline__item card">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role" data-i18n="exp1.role">Ingeniero de Software Senior</h3>
+              <p class="timeline__company" data-i18n="exp1.company">Empresa Tecnológica S.A.</p>
+              <p class="timeline__period"><span data-i18n="exp1.period">Marzo 2022 – Presente</span></p>
+              <p class="timeline__description" data-i18n="exp1.description">Liderazgo del equipo de desarrollo backend, diseño de arquitectura de microservicios y optimización de pipelines CI/CD. Reducción del tiempo de despliegue en un 40%.</p>
+            </div>
+          </div>
+
+          <div class="timeline__item card">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role" data-i18n="exp2.role">Desarrollador Full Stack</h3>
+              <p class="timeline__company" data-i18n="exp2.company">Startup Digital S.L.</p>
+              <p class="timeline__period"><span data-i18n="exp2.period">Junio 2019 – Febrero 2022</span></p>
+              <p class="timeline__description" data-i18n="exp2.description">Desarrollo de aplicaciones web con React y Node.js, implementación de APIs RESTful y gestión de bases de datos PostgreSQL. Participación activa en la definición de producto y experiencia de usuario.</p>
+            </div>
+          </div>
+
+          <div class="timeline__item card">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role" data-i18n="exp3.role">Desarrollador Junior</h3>
+              <p class="timeline__company" data-i18n="exp3.company">Consultoría IT Global</p>
+              <p class="timeline__period"><span data-i18n="exp3.period">Septiembre 2017 – Mayo 2019</span></p>
+              <p class="timeline__description" data-i18n="exp3.description">Desarrollo y mantenimiento de aplicaciones empresariales en Java y Python. Colaboración en proyectos de migración a la nube y automatización de procesos internos.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HABILIDADES TÉCNICAS ========== -->
+    <section class="section section--habilidades" id="habilidades">
+      <div class="section__container">
+        <h2 class="section__title" data-i18n="section.habilidades">Habilidades Técnicas</h2>
+        <div class="skills-grid">
+          <div class="skill-chip" data-category="cloud">
+            <span class="skill-chip__name" data-i18n="skill.aws">AWS</span>
+          </div>
+          <div class="skill-chip" data-category="cloud">
+            <span class="skill-chip__name" data-i18n="skill.azure">Azure</span>
+          </div>
+          <div class="skill-chip" data-category="lenguajes">
+            <span class="skill-chip__name" data-i18n="skill.python">Python</span>
+          </div>
+          <div class="skill-chip" data-category="lenguajes">
+            <span class="skill-chip__name" data-i18n="skill.javascript">JavaScript</span>
+          </div>
+          <div class="skill-chip" data-category="lenguajes">
+            <span class="skill-chip__name" data-i18n="skill.typescript">TypeScript</span>
+          </div>
+          <div class="skill-chip" data-category="herramientas">
+            <span class="skill-chip__name" data-i18n="skill.docker">Docker</span>
+          </div>
+          <div class="skill-chip" data-category="herramientas">
+            <span class="skill-chip__name" data-i18n="skill.git">Git</span>
+          </div>
+          <div class="skill-chip" data-category="herramientas">
+            <span class="skill-chip__name" data-i18n="skill.kubernetes">Kubernetes</span>
+          </div>
+          <div class="skill-chip" data-category="conceptos">
+            <span class="skill-chip__name" data-i18n="skill.cicd">CI/CD</span>
+          </div>
+          <div class="skill-chip" data-category="conceptos">
+            <span class="skill-chip__name" data-i18n="skill.microservices">Microservicios</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCACIÓN ========== -->
+    <section class="section section--educacion" id="educacion">
+      <div class="section__container">
+        <h2 class="section__title" data-i18n="section.educacion">Educación</h2>
+        <div class="education-list">
+          <div class="education-item card">
+            <h3 class="education-item__degree" data-i18n="edu1.degree">Máster en Ingeniería de Software</h3>
+            <p class="education-item__institution" data-i18n="edu1.institution">Universidad Politécnica</p>
+            <p class="education-item__year"><span data-i18n="edu1.year">2017</span></p>
+          </div>
+          <div class="education-item card">
+            <h3 class="education-item__degree" data-i18n="edu2.degree">Grado en Informática</h3>
+            <p class="education-item__institution" data-i18n="edu2.institution">Universidad Nacional</p>
+            <p class="education-item__year"><span data-i18n="edu2.year">2015</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="footer__container">
+      <a href="assets/docs/cv.pdf" download class="footer__download-btn">
+        <span data-i18n="footer.download">Descargar CV en PDF</span>
+      </a>
+      <p class="footer__updated">
+        <span data-i18n="footer.updated">Última actualización: Abril 2026</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
