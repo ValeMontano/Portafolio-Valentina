@@ -42,7 +42,7 @@ const translations = {
     "skill.microservices": "Linux",
     "section.educacion": "Educación",
     "edu1.degree": "Ingeniería en Sistemas Computacionales",
-    "edu1.institution": "Universidad Jesuita de Guadalajara",
+    "edu1.institution": "Universidad Jesuita de Guadalajara (ITESO)",
     "edu1.year": "2026",
     "footer.download": "Descargar CV en PDF",
     "footer.updated": "Última actualización: Abril 2026"
@@ -90,7 +90,7 @@ const translations = {
     "skill.microservices": "Linux",
     "section.educacion": "Education",
     "edu1.degree": "Computer Systems Engineer",
-    "edu1.institution": "Universidad Jesuita de Guadalajara",
+    "edu1.institution": "Universidad Jesuita de Guadalajara (ITESO)",
     "edu1.year": "2026",
     "footer.download": "Download CV as PDF",
     "footer.updated": "Last updated: April 2026"
