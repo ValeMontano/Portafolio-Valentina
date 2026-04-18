@@ -81,7 +81,19 @@ function applyTranslations(lang) {
   for (const element of elements) {
     const key = element.getAttribute('data-i18n');
     if (langData[key] !== undefined) {
-      element.textContent = langData[key];
+      if (langData[key].includes('<br>') || langData[key].includes('<li>')) {
+        element.innerHTML = langData[key];
+      } else {
+        element.textContent = langData[key];
+      }
+    }
+  }
+
+  const htmlElements = document.querySelectorAll('[data-i18n-html]');
+  for (const element of htmlElements) {
+    const key = element.getAttribute('data-i18n-html');
+    if (langData[key] !== undefined) {
+      element.innerHTML = langData[key];
     }
   }
 

@@ -43,6 +43,7 @@
         <li><a href="#perfil" class="hero__nav-link" data-i18n="nav.perfil">Perfil</a></li>
         <li><a href="#experiencia" class="hero__nav-link" data-i18n="nav.experiencia">Experiencia</a></li>
         <li><a href="#habilidades" class="hero__nav-link" data-i18n="nav.habilidades">Habilidades</a></li>
+        <li><a href="#proyectos" class="hero__nav-link" data-i18n="nav.proyectos">Proyectos</a></li>
         <li><a href="#educacion" class="hero__nav-link" data-i18n="nav.educacion">Educación</a></li>
       </ul>
     </nav>
@@ -55,7 +56,7 @@
       <div class="section__container">
         <h2 class="section__title" data-i18n="section.perfil">Perfil Personal</h2>
         <div class="card card--perfil">
-          <p class="card__text" data-i18n="perfil.texto">Profesional con amplia experiencia en el sector tecnológico, apasionado por la innovación y el desarrollo de soluciones eficientes. Con sólidos conocimientos en arquitectura de software, metodologías ágiles y liderazgo de equipos multidisciplinarios. Comprometido con el aprendizaje continuo y la mejora constante de procesos y productos digitales.</p>
+          <p class="card__text" data-i18n="perfil.texto">Estudiante de Ingeniería en Sistemas Computacionales con enfoque en Cloud y DevOps, con experiencia práctica en el diseño, despliegue y gestión de soluciones escalables en AWS, Microsoft Azure y Oracle Cloud Infrastructure (OCI).<br>Capacidad comprobada para automatizar procesos, implementar pipelines de CI/CD y trabajar con aplicaciones contenerizadas mediante Docker. Experiencia en el diseño de arquitecturas seguras y de alta disponibilidad, incluyendo balanceadores de carga, configuración de redes y uso de almacenamiento en la nube.</p>
         </div>
       </div>
     </section>
@@ -69,30 +70,80 @@
           <div class="timeline__item card">
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content">
-              <h3 class="timeline__role" data-i18n="exp1.role">Ingeniero de Software Senior</h3>
-              <p class="timeline__company" data-i18n="exp1.company">Empresa Tecnológica S.A.</p>
-              <p class="timeline__period"><span data-i18n="exp1.period">Marzo 2022 – Presente</span></p>
-              <p class="timeline__description" data-i18n="exp1.description">Liderazgo del equipo de desarrollo backend, diseño de arquitectura de microservicios y optimización de pipelines CI/CD. Reducción del tiempo de despliegue en un 40%.</p>
+              <h3 class="timeline__role" data-i18n="exp1.role">Cloud Operation Intern</h3>
+              <p class="timeline__company" data-i18n="exp1.company">C&amp;A</p>
+              <p class="timeline__period"><span data-i18n="exp1.period">Marzo 2025 – Marzo 2026</span></p>
+              <ul class="timeline__list" data-i18n-html="exp1.description">
+                <li>Diseño, despliegue y gestión de entornos cloud escalables en Microsoft Azure y Oracle Cloud Infrastructure (OCI), mejorando el rendimiento, confiabilidad y disponibilidad del sistema.</li>
+                <li>Automatización de procesos administrativos y operativos usando PowerShell, reduciendo la carga de trabajo manual y aumentando la eficiencia.</li>
+                <li>Implementación de pipelines de CI/CD usando Azure DevOps, optimizando los flujos de desarrollo, pruebas y despliegue.</li>
+                <li>Soporte y mantenimiento de aplicaciones contenerizadas usando Docker, mejorando la portabilidad y consistencia en los despliegues.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROYECTOS ========== -->
+    <section class="section section--proyectos" id="proyectos">
+      <div class="section__container">
+        <h2 class="section__title" data-i18n="section.proyectos">Proyectos</h2>
+        <div class="timeline">
+
+          <div class="timeline__item card">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role" data-i18n="proj1.role">Real-Time Metropolitan Traffic Monitor (AWS Cloud Architecture)</h3>
+              <p class="timeline__company" data-i18n="proj1.company">AWS Lambda, S3, EC2, Route 53</p>
+              <ul class="timeline__list" data-i18n-html="proj1.description">
+                <li>Diseño e implementación de una arquitectura serverless usando AWS Lambda, S3, EC2 y Route 53.</li>
+                <li>Construcción de un sistema capaz de ingerir, procesar y visualizar datos en tiempo real para el monitoreo de tráfico urbano.</li>
+                <li>Garantía de alta disponibilidad y tolerancia a fallos mediante servicios cloud distribuidos.</li>
+                <li>Optimización del rendimiento del sistema reduciendo la latencia a través de un diseño eficiente basado en eventos.</li>
+              </ul>
             </div>
           </div>
 
           <div class="timeline__item card">
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content">
-              <h3 class="timeline__role" data-i18n="exp2.role">Desarrollador Full Stack</h3>
-              <p class="timeline__company" data-i18n="exp2.company">Startup Digital S.L.</p>
-              <p class="timeline__period"><span data-i18n="exp2.period">Junio 2019 – Febrero 2022</span></p>
-              <p class="timeline__description" data-i18n="exp2.description">Desarrollo de aplicaciones web con React y Node.js, implementación de APIs RESTful y gestión de bases de datos PostgreSQL. Participación activa en la definición de producto y experiencia de usuario.</p>
+              <h3 class="timeline__role" data-i18n="proj2.role">Web Application – Ticketing Platform</h3>
+              <p class="timeline__company" data-i18n="proj2.company">Node.js, Express, MongoDB, Bootstrap</p>
+              <ul class="timeline__list" data-i18n-html="proj2.description">
+                <li>Desarrollo de una aplicación web full-stack usando Node.js, Express y MongoDB.</li>
+                <li>Diseño de APIs RESTful para la gestión de usuarios, tickets y transacciones.</li>
+                <li>Construcción de un frontend responsivo usando HTML, CSS y Bootstrap para interacción dinámica.</li>
+                <li>Estructuración de esquemas de base de datos para almacenamiento y recuperación eficiente de datos.</li>
+              </ul>
             </div>
           </div>
 
           <div class="timeline__item card">
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content">
-              <h3 class="timeline__role" data-i18n="exp3.role">Desarrollador Junior</h3>
-              <p class="timeline__company" data-i18n="exp3.company">Consultoría IT Global</p>
-              <p class="timeline__period"><span data-i18n="exp3.period">Septiembre 2017 – Mayo 2019</span></p>
-              <p class="timeline__description" data-i18n="exp3.description">Desarrollo y mantenimiento de aplicaciones empresariales en Java y Python. Colaboración en proyectos de migración a la nube y automatización de procesos internos.</p>
+              <h3 class="timeline__role" data-i18n="proj3.role">Internet Security Services (Linux Server)</h3>
+              <p class="timeline__company" data-i18n="proj3.company">Debian Linux, SSH, DNS, FTP, SAMBA</p>
+              <ul class="timeline__list" data-i18n-html="proj3.description">
+                <li>Despliegue y configuración de múltiples servicios de red en Debian Linux, incluyendo: SSH, DNS, FTP, SAMBA y servidor de correo.</li>
+                <li>Gestión de permisos de usuario y control de acceso para operación segura del sistema.</li>
+                <li>Monitoreo del sistema y resolución de problemas para garantizar disponibilidad y confiabilidad.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline__item card">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role" data-i18n="proj4.role">Data Analysis Project – Pattern Recognition and Visualization</h3>
+              <p class="timeline__company" data-i18n="proj4.company">Python, Pandas, NumPy, Scikit-learn</p>
+              <ul class="timeline__list" data-i18n-html="proj4.description">
+                <li>Análisis de datos usando Pandas y NumPy para limpiar, transformar y explorar conjuntos de datos.</li>
+                <li>Desarrollo y evaluación de modelos de machine learning usando Scikit-learn para reconocimiento de patrones y predicción.</li>
+                <li>Visualización de hallazgos usando herramientas de visualización de datos para apoyar la toma de decisiones.</li>
+                <li>Aplicación de técnicas estadísticas para identificar tendencias y mejorar el rendimiento de los modelos.</li>
+              </ul>
             </div>
           </div>
 
@@ -111,14 +162,14 @@
           <div class="skill-chip" data-category="cloud">
             <span class="skill-chip__name" data-i18n="skill.azure">Azure</span>
           </div>
-          <div class="skill-chip" data-category="lenguajes">
-            <span class="skill-chip__name" data-i18n="skill.python">Python</span>
+          <div class="skill-chip" data-category="cloud">
+            <span class="skill-chip__name" data-i18n="skill.python">Oracle Cloud</span>
           </div>
           <div class="skill-chip" data-category="lenguajes">
-            <span class="skill-chip__name" data-i18n="skill.javascript">JavaScript</span>
+            <span class="skill-chip__name" data-i18n="skill.javascript">Python</span>
           </div>
           <div class="skill-chip" data-category="lenguajes">
-            <span class="skill-chip__name" data-i18n="skill.typescript">TypeScript</span>
+            <span class="skill-chip__name" data-i18n="skill.typescript">JavaScript</span>
           </div>
           <div class="skill-chip" data-category="herramientas">
             <span class="skill-chip__name" data-i18n="skill.docker">Docker</span>
@@ -127,13 +178,13 @@
             <span class="skill-chip__name" data-i18n="skill.git">Git</span>
           </div>
           <div class="skill-chip" data-category="herramientas">
-            <span class="skill-chip__name" data-i18n="skill.kubernetes">Kubernetes</span>
+            <span class="skill-chip__name" data-i18n="skill.kubernetes">CI/CD</span>
           </div>
           <div class="skill-chip" data-category="conceptos">
-            <span class="skill-chip__name" data-i18n="skill.cicd">CI/CD</span>
+            <span class="skill-chip__name" data-i18n="skill.cicd">MongoDB</span>
           </div>
           <div class="skill-chip" data-category="conceptos">
-            <span class="skill-chip__name" data-i18n="skill.microservices">Microservicios</span>
+            <span class="skill-chip__name" data-i18n="skill.microservices">Linux</span>
           </div>
         </div>
       </div>
@@ -145,14 +196,9 @@
         <h2 class="section__title" data-i18n="section.educacion">Educación</h2>
         <div class="education-list">
           <div class="education-item card">
-            <h3 class="education-item__degree" data-i18n="edu1.degree">Máster en Ingeniería de Software</h3>
-            <p class="education-item__institution" data-i18n="edu1.institution">Universidad Politécnica</p>
-            <p class="education-item__year"><span data-i18n="edu1.year">2017</span></p>
-          </div>
-          <div class="education-item card">
-            <h3 class="education-item__degree" data-i18n="edu2.degree">Grado en Informática</h3>
-            <p class="education-item__institution" data-i18n="edu2.institution">Universidad Nacional</p>
-            <p class="education-item__year"><span data-i18n="edu2.year">2015</span></p>
+            <h3 class="education-item__degree" data-i18n="edu1.degree">Ingeniería en Sistemas Computacionales</h3>
+            <p class="education-item__institution" data-i18n="edu1.institution">Universidad Jesuita de Guadalajara</p>
+            <p class="education-item__year"><span data-i18n="edu1.year">2026</span></p>
           </div>
         </div>
       </div>
