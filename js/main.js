@@ -122,9 +122,7 @@ function initLanguageSwitcher() {
 
   let currentLang = getStoredLanguage();
 
-  if (currentLang !== 'es') {
-    applyTranslations(currentLang);
-  }
+  applyTranslations(currentLang);
   updateSwitcherButton(currentLang);
 
   switcher.addEventListener('click', () => {
