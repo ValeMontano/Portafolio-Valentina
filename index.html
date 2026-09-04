@@ -11,7 +11,8 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Portafolio - Valentina Montaño</title>
+  <title>Valentina Montaño | Data Engineering, Cloud &amp; DevOps</title>
+  <meta name="description" content="Portafolio profesional de Valentina Montaño: experiencia en Data Engineering, Cloud, DevOps, Python, SQL, Azure, OCI y AWS." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -26,7 +27,7 @@
       <div class="hero__photo-wrapper">
         <img
           src="assets/img/face.png"
-          alt="Foto de perfil de Nombre del Usuario"
+          alt="Foto de perfil de Valentina Montaño"
           class="hero__photo"
         />
       </div>
@@ -35,13 +36,16 @@
           <h1 class="hero__name" data-i18n="hero.name">Valentina Montaño</h1>
           <button class="lang-switcher" id="lang-switcher" type="button" aria-label="Cambiar idioma a inglés" title="Switch to English">EN</button>
         </div>
-        <p class="hero__title" data-i18n="hero.title">Ing. Sistemas Computacionales</p>
+        <p class="hero__title" data-i18n="hero.title">Data Engineering | Cloud &amp; DevOps</p>
         <div class="hero__contact">
           <a href="mailto:valentinamontanosa@gmail.com" class="hero__link">
             <span class="hero__icon" aria-hidden="true"></span> <span data-i18n="hero.email">email: valentinamontanosa@gmail.com</span>
           </a>
           <a href="https://linkedin.com/in/valentina-montaño1610" class="hero__link" target="_blank" rel="noopener noreferrer">
             <span class="hero__icon" aria-hidden="true"></span> <span data-i18n="hero.linkedin">LinkedIn</span>
+          </a>
+          <a href="https://github.com/ValeMontano" class="hero__link" target="_blank" rel="noopener noreferrer">
+            <span class="hero__icon" aria-hidden="true"></span> <span data-i18n="hero.github">GitHub</span>
           </a>
         </div>
       </div>
@@ -64,7 +68,7 @@
       <div class="section__container">
         <h2 class="section__title" data-i18n="section.perfil">Perfil Personal</h2>
         <div class="card card--perfil">
-          <p class="card__text" data-i18n="perfil.texto">Estudiante de Ingeniería en Sistemas Computacionales con enfoque en Cloud y DevOps, con experiencia práctica en el diseño, despliegue y gestión de soluciones escalables en AWS, Microsoft Azure y Oracle Cloud Infrastructure (OCI).<br>Capacidad comprobada para automatizar procesos, implementar pipelines de CI/CD y trabajar con aplicaciones contenerizadas mediante Docker. Experiencia en el diseño de arquitecturas seguras y de alta disponibilidad, incluyendo balanceadores de carga, configuración de redes y uso de almacenamiento en la nube.</p>
+          <p class="card__text" data-i18n="perfil.texto">Estudiante de último semestre de Ingeniería en Sistemas Computacionales en ITESO, con graduación en diciembre de 2026 y experiencia práctica en ingeniería de datos, analítica, nube y DevOps.<br>He desarrollado APIs con Python y FastAPI, flujos de monitoreo y dashboards con datos de Avigilon, además de automatización, CI/CD e infraestructura en Azure y OCI. Busco oportunidades profesionales en Data Engineering, Cloud o DevOps.</p>
         </div>
       </div>
     </section>
@@ -78,14 +82,30 @@
           <div class="timeline__item card">
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content">
-              <h3 class="timeline__role" data-i18n="exp1.role">Cloud Operation Intern</h3>
-              <p class="timeline__company" data-i18n="exp1.company">C&amp;A</p>
-              <p class="timeline__period"><span data-i18n="exp1.period">Marzo 2025 – Marzo 2026</span></p>
+              <h3 class="timeline__role" data-i18n="exp1.role">Software &amp; Data Analytics Intern</h3>
+              <p class="timeline__company" data-i18n="exp1.company">ITISA</p>
+              <p class="timeline__period"><span data-i18n="exp1.period">Mayo 2026 – Actualidad</span></p>
               <ul class="timeline__list" data-i18n-html="exp1.description">
-                <li>Diseño, despliegue y gestión de entornos cloud escalables en Microsoft Azure y Oracle Cloud Infrastructure (OCI), mejorando el rendimiento, confiabilidad y disponibilidad del sistema.</li>
-                <li>Automatización de procesos administrativos y operativos usando PowerShell, reduciendo la carga de trabajo manual y aumentando la eficiencia.</li>
-                <li>Implementación de pipelines de CI/CD usando Azure DevOps, optimizando los flujos de desarrollo, pruebas y despliegue.</li>
-                <li>Soporte y mantenimiento de aplicaciones contenerizadas usando Docker, mejorando la portabilidad y consistencia en los despliegues.</li>
+                <li>Desarrollo de servicios con Python y FastAPI para recibir y procesar eventos de analítica de conteo de personas desde sistemas Avigilon mediante endpoints REST.</li>
+                <li>Diseño de persistencia local y flujos de monitoreo con SQLite y CSV para entornos Windows/NVR con conectividad limitada.</li>
+                <li>Desarrollo de un dashboard que consolida disponibilidad, tiempo de inactividad y logs de tres grabadores de video en red.</li>
+                <li>Soporte a una aplicación de monitoreo de alarmas aeroportuarias integrada con Avigilon, incluyendo APIs, despliegue en Windows y validación de puertos y firewall.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline__item card">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role" data-i18n="exp2.role">Cloud Operation Intern</h3>
+              <p class="timeline__company" data-i18n="exp2.company">C&amp;A México</p>
+              <p class="timeline__period"><span data-i18n="exp2.period">Marzo 2025 – Marzo 2026</span></p>
+              <ul class="timeline__list" data-i18n-html="exp2.description">
+                <li>Diseño, despliegue y soporte de entornos cloud en Microsoft Azure y Oracle Cloud Infrastructure (OCI), incluyendo máquinas virtuales, redes privadas, subredes, reglas de seguridad y almacenamiento.</li>
+                <li>Automatización de tareas administrativas y operativas con PowerShell y apoyo a flujos de datos y reportes con Power BI, SSAS y KNIME.</li>
+                <li>Implementación de flujos CI/CD con Azure DevOps y conectividad segura entre agentes de compilación y entornos OCI.</li>
+                <li>Despliegue de servicios .NET 8 y Python en Docker; configuración de balanceadores, certificados SSL/TLS, HTTPS y enrutamiento.</li>
+                <li>Monitoreo, validación de respaldos y restauraciones, solución de incidentes, documentación y análisis de costos cloud.</li>
               </ul>
             </div>
           </div>
@@ -164,35 +184,56 @@
       <div class="section__container">
         <h2 class="section__title" data-i18n="section.habilidades">Habilidades Técnicas</h2>
         <div class="skills-grid">
+          <div class="skill-chip" data-category="lenguajes">
+            <span class="skill-chip__name" data-i18n="skill.python">Python</span>
+          </div>
+          <div class="skill-chip" data-category="datos">
+            <span class="skill-chip__name" data-i18n="skill.sql">SQL</span>
+          </div>
+          <div class="skill-chip" data-category="apis">
+            <span class="skill-chip__name" data-i18n="skill.fastapi">FastAPI / REST APIs</span>
+          </div>
+          <div class="skill-chip" data-category="datos">
+            <span class="skill-chip__name" data-i18n="skill.powerbi">Power BI</span>
+          </div>
+          <div class="skill-chip" data-category="cloud">
+            <span class="skill-chip__name" data-i18n="skill.azure">Microsoft Azure</span>
+          </div>
+          <div class="skill-chip" data-category="cloud">
+            <span class="skill-chip__name" data-i18n="skill.oci">Oracle Cloud</span>
+          </div>
           <div class="skill-chip" data-category="cloud">
             <span class="skill-chip__name" data-i18n="skill.aws">AWS</span>
-          </div>
-          <div class="skill-chip" data-category="cloud">
-            <span class="skill-chip__name" data-i18n="skill.azure">Azure</span>
-          </div>
-          <div class="skill-chip" data-category="cloud">
-            <span class="skill-chip__name" data-i18n="skill.python">Oracle Cloud</span>
-          </div>
-          <div class="skill-chip" data-category="lenguajes">
-            <span class="skill-chip__name" data-i18n="skill.javascript">Python</span>
-          </div>
-          <div class="skill-chip" data-category="lenguajes">
-            <span class="skill-chip__name" data-i18n="skill.typescript">JavaScript</span>
           </div>
           <div class="skill-chip" data-category="herramientas">
             <span class="skill-chip__name" data-i18n="skill.docker">Docker</span>
           </div>
           <div class="skill-chip" data-category="herramientas">
-            <span class="skill-chip__name" data-i18n="skill.git">Git</span>
+            <span class="skill-chip__name" data-i18n="skill.git">Git / GitHub</span>
           </div>
           <div class="skill-chip" data-category="herramientas">
-            <span class="skill-chip__name" data-i18n="skill.kubernetes">CI/CD</span>
+            <span class="skill-chip__name" data-i18n="skill.cicd">CI/CD</span>
           </div>
-          <div class="skill-chip" data-category="conceptos">
-            <span class="skill-chip__name" data-i18n="skill.cicd">MongoDB</span>
+          <div class="skill-chip" data-category="datos">
+            <span class="skill-chip__name" data-i18n="skill.sqlserver">SQL Server</span>
           </div>
-          <div class="skill-chip" data-category="conceptos">
-            <span class="skill-chip__name" data-i18n="skill.microservices">Linux</span>
+          <div class="skill-chip" data-category="datos">
+            <span class="skill-chip__name" data-i18n="skill.postgres">PostgreSQL / SQLite</span>
+          </div>
+          <div class="skill-chip" data-category="lenguajes">
+            <span class="skill-chip__name" data-i18n="skill.typescript">TypeScript</span>
+          </div>
+          <div class="skill-chip" data-category="frontend">
+            <span class="skill-chip__name" data-i18n="skill.react">React / Next.js</span>
+          </div>
+          <div class="skill-chip" data-category="cloud">
+            <span class="skill-chip__name" data-i18n="skill.cloudflare">Cloudflare D1 / R2</span>
+          </div>
+          <div class="skill-chip" data-category="datos">
+            <span class="skill-chip__name" data-i18n="skill.nosql">MongoDB / Cassandra</span>
+          </div>
+          <div class="skill-chip" data-category="sistemas">
+            <span class="skill-chip__name" data-i18n="skill.systems">Linux / Windows Server</span>
           </div>
         </div>
       </div>
@@ -206,7 +247,7 @@
           <div class="education-item card">
             <h3 class="education-item__degree" data-i18n="edu1.degree">Ingeniería en Sistemas Computacionales</h3>
             <p class="education-item__institution" data-i18n="edu1.institution">Universidad Jesuita de Guadalajara (ITESO)</p>
-            <p class="education-item__year"><span data-i18n="edu1.year">2026</span></p>
+            <p class="education-item__year"><span data-i18n="edu1.year">Agosto 2021 – Diciembre 2026</span></p>
           </div>
         </div>
       </div>
@@ -217,11 +258,11 @@
   <!-- ========== FOOTER ========== -->
   <footer class="footer" id="footer">
     <div class="footer__container">
-      <a href="assets/docs/cv.pdf" download class="footer__download-btn">
+      <a href="assets/docs/Cv.pdf" download class="footer__download-btn">
         <span data-i18n="footer.download">Descargar CV en PDF</span>
       </a>
       <p class="footer__updated">
-        <span data-i18n="footer.updated">Última actualización: Abril 2026</span>
+        <span data-i18n="footer.updated">Última actualización: Septiembre 2026</span>
       </p>
     </div>
   </footer>
